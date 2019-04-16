@@ -22,6 +22,10 @@ module.exports = {
         "field": "filter",
         "extension": "js"
     }],
+    "catalog_script_client": [{
+        "field": "script",
+        "extension": "js"
+    }],
     "chat_queue": [{
         "field": "not_available",
         "extension": "html"
@@ -401,7 +405,7 @@ module.exports = {
     }],
     "sp_css": [{
         "field": "css",
-        "extension": "css"
+        "extension": "scss"
     }],
     "sp_instance": [{
         "field": "css",

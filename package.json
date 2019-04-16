@@ -3,7 +3,11 @@
   "author": "Sal Costa <costas0811@hotmail.com> (http://anerrantprogrammer.com",
   "displayName": "ServiceNow Sync",
   "description": "Sync records from ServiceNow to local files using VSC",
-  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salcosta/vsc-servicenow-sync.git"
+  },
+  "version": "0.2.2",
   "license": "MIT",
   "publisher": "anerrantprogrammer",
   "engines": {
@@ -35,34 +39,42 @@
       "editor/context": [
         {
           "command": "sn_sync.openRecordInBrowser",
-          "group": "navigation"
+          "group": "z_commands"
         }
       ]
     },
     "commands": [
       {
         "command": "sn_sync.syncTable",
-        "title": "Sync Table"
+        "title": "SN Sync: Sync Table"
       },
       {
         "command": "sn_sync.enterConnectionSettings",
-        "title": "Connect To ServiceNow"
+        "title": "SN Sync: Connect To ServiceNow"
       },
       {
         "command": "sn_sync.syncRecord",
-        "title": "Sync Record"
+        "title": "SN Sync: Sync Record"
       },
       {
         "command": "sn_sync.syncMultipleRecords",
-        "title": "Sync Multiple Records"
+        "title": "SN Sync: Sync Multiple Records"
       },
       {
         "command": "sn_sync.openRecordInBrowser",
-        "title": "Open Record In Browser"
+        "title": "SN Sync: Open Record In Browser"
+      },
+      {
+        "command": "sn_sync.updateScope",
+        "title": "SN Sync: Set Scope"
       },
       {
         "command": "sn_sync.compareFile",
-        "title": "Compare File To Server"
+        "title": "SN Sync: Compare File To Server"
+      },
+      {
+        "command": "sn_sync.evalScript",
+        "title": "SN Sync: Execute current file"
       }
     ]
   },
@@ -80,8 +92,10 @@
   "dependencies": {
     "diff": "^3.4.0",
     "glob": "^7.1.2",
+    "html2plaintext": "^2.0.1",
     "lodash": "^4.17.4",
     "opn": "^5.1.0",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "sanitize-filename": "^1.6.1"
   }
 }
